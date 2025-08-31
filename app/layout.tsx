@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+import ChatFab from "@/components/chat-fab"
 
 export const metadata: Metadata = {
   title: "ChaufX Concierge",
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${montserrat.variable} ${GeistMono.variable} dark antialiased`}>
       <body className="font-sans">
         <Suspense fallback={null}>{children}</Suspense>
+        <ChatFab />
         <Analytics />
       </body>
     </html>
